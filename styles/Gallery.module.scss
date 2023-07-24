@@ -1,0 +1,134 @@
+$padding1:15%;
+$padding2:8%;
+$padding3:3.5%;
+
+.hero{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../public/images//menu-3col-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.381);
+    background-blend-mode: color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    h2{
+        font-size: 60px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    p{
+        font-size: 18px;
+        opacity: .8;
+        text-align: center;
+    }
+}
+
+.gallery{
+    width: 100%;
+    padding: 50px 1%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item{
+    width: calc(100% / 3 - 10px);
+    height: 360px;
+    border: 1px solid;
+    position: relative;
+    overflow: hidden;
+
+    .bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        filter: brightness(70%);
+        transition: .7s;
+    }
+
+    p{
+        position: absolute;
+        color: white;
+        z-index: 100;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        text-transform: uppercase;
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .icon{
+        position: absolute;
+        left: 50%;
+        top: 65%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .7s;
+    }
+}
+
+.item:hover .bg{
+    transform: scale(1.1);
+}
+
+.item::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    border: 2px solid white;
+    width: 96%;
+    height: 94%;
+    transition: .7s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.item:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+.item:hover .icon{
+    top: 55%;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:1024px){
+    .item{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:820px) {
+    .hero{
+        padding: 10px $padding3;
+        h2{
+            font-size: 40px;
+        }
+    }
+
+
+    .gallery{
+        flex-direction: column;
+    }
+
+    .item{
+        width: 100%;
+    }
+}

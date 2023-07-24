@@ -1,0 +1,103 @@
+.main {
+  width: 100%;
+  height: 80px;
+  border: 5px solid black;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  //gap: 100px;
+  //background-color: red;
+}
+
+.title{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: 1s;
+}
+
+.title:hover{
+  background-color: black;
+  color: white;
+}
+
+.menu {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.menu.open {
+  max-height: 400px;
+}
+
+.a{
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img{
+  border-radius: 50%;
+}
+
+.bg{
+  background-color: black;
+  color: white;
+}
+
+.menuItem{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menuItem > div p:nth-child(1){
+  text-transform: uppercase;
+  font-size: 15.5px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.menuItem > div p:nth-child(2){
+ color: #252525;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.a span{
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width:1024px){
+  .menuItem{
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .menu{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .a{
+    width: 100%;
+  }
+
+  .menuItem{
+    gap: 6px;
+  }
+}

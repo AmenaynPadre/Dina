@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.is-sticky {
+  @keyframes navigation {
+    from {
+      top: -100%;
+    }
+    to {
+      top: -20px;
+    }
+  }
+  animation: 1s navigation forwards linear;
+  position: fixed;
+  z-index: 1000;
+  top: -100%;
+  padding: 20px;
+  width: 100%;
+  background-color: #252525;
+}
+
+@media screen and (max-width:1024px){
+  .is-sticky {
+    animation: none;
+  }
+}
+
+:root{
+  --swiper-navigation-color: #ccc !important;
+}

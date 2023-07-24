@@ -1,0 +1,35 @@
+.btn1{
+  text-transform: uppercase;
+  width: 160px;
+  height: 50px;
+  border: 5px solid white;
+  transition: .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+.btn1:hover{
+  background-color: #BC8D4B;
+  border-color: #BC8D4B;
+}
+
+.btn2{
+  text-transform: uppercase;
+  width: 160px;
+  height: 50px;
+  border: 5px solid black;
+  transition: .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 14px;
+
+}
+.btn2:hover{
+  color: white;
+  background-color: #BC8D4B;
+  border-color: #BC8D4B;
+}
